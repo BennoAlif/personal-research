@@ -1,0 +1,78 @@
+<!DOCTYPE html>
+<html>
+
+<head>
+    <meta charset="utf-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <title>Columns</title>
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <style>
+        body {
+            color: white;
+            font-family: 'Courier New', Courier, monospace;
+            text-align: center;
+        }
+
+        #content {
+            display: grid;
+            grid-template-columns: repeat(3,1fr);
+            grid-template-rows: repeat(4, minmax(150px, auto));
+            grid-gap: 8px;
+            max-width: 960px;
+            margin: 0 auto;
+        }
+
+        #content div {
+            background: #3bbced;
+            padding: 30px;
+        }
+
+        #content div:nth-child(even) {
+            background: #777;
+        }
+
+        .one{
+            justify-self: start;
+            align-self: start;
+        }
+
+        .two{
+            justify-self: center;
+            align-self: center;
+        }
+
+        .three{
+            justify-self: end;
+            align-self: end;
+        }
+        
+        .four{
+            justify-self: end;
+            align-self: end;
+        }
+
+        .five{
+            justify-self: center;
+            align-self: center;
+        }
+
+        .six{
+            justify-self: start;
+            align-self: start;
+        }
+       
+    </style>
+</head>
+
+<body>
+    <div id="content">
+        <div class="one">1</div>
+        <div class="two">2</div>
+        <div class="three">3</div>
+        <div class="four">4</div>
+        <div class="five">5</div>
+        <div class="six">6</div>        
+    </div>
+</body>
+
+</html>

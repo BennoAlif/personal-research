@@ -1,0 +1,192 @@
+<!DOCTYPE html>
+<html>
+
+<head>
+    <meta charset="utf-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <title>Floating Element</title>
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <style>
+        body {
+            background-color: aliceblue;
+        }
+
+        .wrapper {
+            background-color: #fff;
+            max-width: 960px;
+            margin: 0 auto;
+            padding: 20px;
+        }
+
+        .wrapper:after {
+            content: "";
+            display: block;
+            clear: both;
+        }
+
+        .services:after {
+            content: "";
+            display: block;
+            clear: both;
+        }
+
+        /* Float in boxes */
+
+        /* .blue {
+            background-color: lightblue;
+            float: right;
+        }
+
+        .red {
+            background-color: lightcoral;
+            float: right;
+        }
+
+        .green {
+            background-color: lightgreen;
+            float: left;
+        }
+
+        .box {
+            height: 100px;
+            width: 100px;
+        } */
+
+        /* Float with an Image */
+
+        /* img {
+            float: left;
+            float: right;
+        } */
+
+        .service h2,
+        .service p {
+            color: #999;
+            margin: 10px auto;
+            text-align: center;
+        }
+
+        .service {
+            float: left;
+            background-color: #eee;
+            width: 29%;
+            margin: 1%;
+            padding: 1%;
+        }
+
+        #banner {
+            max-height: 300px;
+            overflow: hidden;
+            margin: 1%;
+            position: relative;
+        }
+
+        #banner h2 {
+            position: absolute;
+            margin: 0;
+            top: 30px;
+            width: 100%;
+            text-align: center;
+        }
+
+        .content {
+            padding: 10px;
+            clear: both;
+            margin-top: 0px;
+        }
+
+        .content p {
+            -webkit-column-count: 3;
+            column-count: 3;
+            -webkit-column-gap: 20px;
+            column-gap: 20px;
+            -webkit-column-rule: 3px solid #000;
+            column-rule: 3px solid #000;
+            text-align: justify;
+        }
+
+        section,
+        aside {
+            float: left;
+            width: 46%;
+            padding: 1%;
+            margin: 1%;
+            background-color: #f2f2f2;
+        }
+
+        .columns:after {
+            display: block;
+            content: "";
+            clear: both;
+        }
+    </style>
+</head>
+
+<body>
+    <div class="wrapper">
+        <!-- <img src="https://cdn.shopify.com/s/files/1/0254/2381/products/IMG_9995.jpg?v=1417894792" alt="Image" width="300">
+        <p>Lorem ipsum dolor sit, amet consectetur adipisicing elit. Quisquam fugit quos sit delectus voluptate culpa
+            expedita velit nemo maxime ab soluta exercitationem possimus minima explicabo repellendus, quibusdam
+            officia, dolorum quidem?</p> -->
+
+        <!-- <div class="blue box"></div>
+        <div class="red box"></div>
+        <div class="green box"></div> -->
+        <div class="services">
+            <div id="banner">
+                <h2>This is Banner</h2>
+                <img src="https://cdn.shopify.com/s/files/1/0254/2381/products/IMG_9995.jpg?v=1417894792" alt="Image"
+                    width="100%">
+            </div>
+            <div class="service">
+                <h2>Service 1</h2>
+                <p>this is service 1</p>
+            </div>
+            <div class="service">
+                <h2>Service 2</h2>
+                <p>this is service 2</p>
+            </div>
+            <div class="service">
+                <h2>Service 3</h2>
+                <p>this is service 3</p>
+            </div>
+        </div>
+
+        <div class="content">
+            <h2>Content</h2>
+            <p>Lorem ipsum, dolor sit amet consectetur adipisicing elit. Obcaecati consequuntur ea, libero corporis ad
+                asperiores incidunt dicta, vero possimus minima laborum. Placeat minus, harum pariatur ipsam dolore
+                quas tempora eius soluta omnis possimus molestias officiis maxime similique. Assumenda quis doloribus
+                error est facilis sunt sequi illum exercitationem a? Velit sit sequi eos quia cum, quae iste ipsam!
+                Tenetur veritatis culpa voluptatem corporis quaerat ab repudiandae quod, libero cupiditate repellendus
+                nam, cum eligendi minima doloribus? Laborum beatae voluptate inventore, saepe velit obcaecati
+                perferendis rem, at iste, odio maiores deserunt deleniti veritatis animi dolor sit tempora tempore?
+                Quibusdam necessitatibus eum inventore eos.</p>
+        </div>
+
+        <div class="columns">
+            <section>
+                <h2>This is Column 1</h2>
+                <p>Lorem ipsum dolor sit amet consectetur, adipisicing elit. Voluptatum corporis vitae asperiores
+                    doloribus fugiat, reiciendis cumque possimus, eum numquam impedit dicta voluptate neque dolor, ex
+                    maxime voluptatem deleniti expedita perferendis hic. Sit nisi veritatis non qui quibusdam, corporis
+                    fugiat dolores consequatur quae neque accusamus nesciunt magnam vel, nostrum laudantium culpa.</p>
+                <p>Lorem ipsum dolor sit amet consectetur, adipisicing elit. Voluptatum corporis vitae asperiores
+                    doloribus fugiat, reiciendis cumque possimus, eum numquam impedit dicta voluptate neque dolor, ex
+                    maxime voluptatem deleniti expedita perferendis hic. Sit nisi veritatis non qui quibusdam, corporis
+                    fugiat dolores consequatur quae neque accusamus nesciunt magnam vel, nostrum laudantium culpa.</p>
+            </section>
+            <aside>
+                <h2>This is column 2</h2>
+                <p>Lorem ipsum dolor sit amet consectetur, adipisicing elit. Voluptatum corporis vitae asperiores
+                    doloribus fugiat, reiciendis cumque possimus, eum numquam impedit dicta voluptate neque dolor, ex
+                    maxime voluptatem deleniti expedita perferendis hic. Sit nisi veritatis non qui quibusdam, corporis
+                    fugiat dolores consequatur quae neque accusamus nesciunt magnam vel, nostrum laudantium culpa.</p>
+                <img src="https://cdn.shopify.com/s/files/1/0254/2381/products/IMG_9995.jpg?v=1417894792" alt="Image"
+                    width="100%">
+            </aside>
+        </div>
+    </div>
+</body>
+
+</html>

@@ -1,0 +1,74 @@
+<!DOCTYPE html>
+<html>
+
+<head>
+    <meta charset="utf-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <title>Columns</title>
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <style>
+        body {
+            color: white;
+            font-family: 'Courier New', Courier, monospace;
+            text-align: center;
+        }
+
+        #content {
+            display: grid;            
+            grid-template-columns: repeat(3,1fr);            
+            grid-gap: 8px;
+            max-width: 960px;
+            margin: 0 auto;
+        }
+
+        #content div {
+            background: #3bbced;
+            padding: 30px;
+        }
+
+        #content div.four {
+            background: #3bbced;
+            padding: 10;
+        }
+
+        #content div:nth-child(even) {
+            background: #777;
+        }
+        #nested{
+            display: grid;
+            grid-template-rows: minmax(20px, auto);
+            grid-template-columns: 1fr 1fr;
+            grid-gap: 10px;            
+            grid-column: span 3;
+            
+            /* transform: rotate(1deg); */
+        }
+        #nested p{
+            border: 1px solid #ffffff;
+            grid-auto-rows: 100px;
+            padding: 10px;
+            margin: 0;
+            /* transform: rotate(-1deg); */
+            /* background-color: #000; */
+        }
+        
+    </style>
+</head>
+
+<body>
+    <div id="content">
+        <div class="one">1</div>
+        <div class="two">2</div>
+        <div class="three">3</div>
+        <div class="four" id="nested">
+            <p>1</p>
+            <p>2</p>
+            <p>3</p>
+            <p>4</p>
+        </div>
+        <div class="five">5</div>
+        <div class="six">6</div>        
+    </div>
+</body>
+
+</html>
