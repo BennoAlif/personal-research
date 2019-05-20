@@ -4,7 +4,7 @@
             <form @submit.prevent="editEmployee" class="ui form">
                 <div class="field">
                     <label>Employee ID</label>
-                    <input type="text" disabled v-model="employee_id" required placeholder="Employee ID">
+                    <input type="number" disabled v-model="employee_id" required placeholder="Employee ID">
                 </div>
                 <div class="field">
                     <label>Name</label>

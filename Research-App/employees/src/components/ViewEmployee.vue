@@ -80,6 +80,8 @@ export default {
                 })
         },
         deleteEmployee(){
+            if (confirm('Beneran mau dihapus?')) {
+                
             db.collection('employees').where('employee_id', '==', this.$route.params.employee_id).get()
                 .then(querySnapshot => {
                     querySnapshot.forEach(doc => {
@@ -87,6 +89,7 @@ export default {
                         this.$router.push('/')
                     })
                 })
+            }
         }
     }
 }
